@@ -6,7 +6,6 @@ class RequestHandler {
     }
 
     async request(endpoint, query = {}, method, body, version = this._client.version) {
-        await queue.wait()
         return new Promise((resolve, reject) => {
             const options = {
                 validateStatus: null,
