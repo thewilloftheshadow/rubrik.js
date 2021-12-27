@@ -46,3 +46,6 @@ class Rubrik {
         return this.requestHandler.request(endpoint, query, method, body)
     }
 }
+
+
+module.exports = Rubrik
