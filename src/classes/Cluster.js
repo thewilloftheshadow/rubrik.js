@@ -29,7 +29,7 @@
 
     /**
      * @description Get this cluster's nodes
-     * @returns {Promise<[id]>}
+     * @returns {string[]} Array of the cluster IDs
     */
     async getNodes() {
         const data = await this._request("/cluster/me/node_id")

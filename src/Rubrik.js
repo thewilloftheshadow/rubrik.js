@@ -1,6 +1,12 @@
 const RequestHandler = require("./RequestHandler")
 
 class Rubrik {
+
+    /**
+     *
+     * @constructs Rubrik
+     * @description The Rubrik API client
+     */
     constructor(options) {
         if (!options.token) throw new Error("Support for user/pass combinations is currently not available, this will be released in a future version")
         this.token = options.token
@@ -16,7 +22,7 @@ class Rubrik {
      *
      * @public
      * @param {string} [clusterId="me"] - The cluster's ID
-     * @returns {Promise<any>} The raw request data
+     * @returns {Promise<Cluster>} A Cluster object on Rubrik
      */
     async getCluster(id = "me") {
         const data = await this._request(`/cluster/${id}`)

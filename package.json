@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "scripts": {
         "test": "mocha test.js",
-        "docsold": "npx jsdoc ./src -r -d docs -t node_modules/docdash -u ./tutorials --readme README.md"
+        "docs": "npx jsdoc ./src -r -d docs -t node_modules/docdash --readme README.md",
+        "localdocs": "npm run docs && cd docs && caddy file-server && cd .."
     },
     "repository": {
         "type": "git",
