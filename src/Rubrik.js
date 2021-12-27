@@ -27,7 +27,7 @@ class Rubrik {
      * @returns {Promise<any>} The raw request data
      */
     async getCluster(id = "me") {
-        const data = await this.requestHandler(`/cluster/${id}`)
+        const data = await this._request(`/cluster/${id}`)
         return new Cluster(data)
     }
 
