@@ -1,0 +1,41 @@
+{
+    "name": "rubrik-js",
+    "version": "0.1.0",
+    "description": "Unofficial JS wrapper for the Rubrik API",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "mocha test.js",
+        "docsold": "npx jsdoc ./src -r -d docs -t node_modules/docdash -u ./tutorials --readme README.md"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thewilloftheshadow/amaribot.js.git"
+    },
+    "keywords": [
+        "rubrik",
+        "rest",
+        "api"
+    ],
+    "author": "Shadow",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/thewilloftheshadow/rubrik-js/issues"
+    },
+    "homepage": "https://github.com/thewilloftheshadow/rubrik-js#readme",
+    "devDependencies": {
+        "docdash": "^1.2.0",
+        "expect.js": "^0.3.1",
+        "minami": "^1.2.3",
+        "mocha": "^9.1.0",
+        "taffydb": "^2.7.3",
+        "typescript": "^4.4.2"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "ms": "^2.1.3",
+        "update-notifier": "^5.1.0"
+    },
+    "engines": {
+        "node": ">=14"
+    }
+}
