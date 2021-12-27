@@ -2,16 +2,8 @@ const RequestHandler = require("./RequestHandler")
 
 class Rubrik {
     constructor(options) {
-        // if((!options.user && !options.pass) && (!options.token)) throw new Error("Either a username and password combination or a token must be provided!")
-        // if(options.user && options.pass) {
-        //     this.user = options.user
-        //     this.pass = options.pass
-        //     this.auth = "user"
-        // } else {
         if (!options.token) throw new Error("Support for user/pass combinations is currently not available, this will be released in a future version")
         this.token = options.token
-        this.auth = "token"
-        // }
         this.cluster_ip = options.cluster_ip
         if (!this.cluster_ip) throw new Error("A cluster IP must be provided!")
         this.version = options.version ?? "v1"

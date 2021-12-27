@@ -25,4 +25,14 @@
          */
         Object.defineProperty(this, "rawData", { value: inputData })
     }
+
+
+    /**
+     * @description Get this cluster's nodes
+     * @returns {Promise<[id]>}
+    */
+    async getNodes() {
+        const data = await this._request("/cluster/me/node_id")
+        return data.map((x) => x.id)
+    }
 }

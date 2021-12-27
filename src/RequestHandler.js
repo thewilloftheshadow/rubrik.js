@@ -10,7 +10,7 @@ class RequestHandler {
             const options = {
                 validateStatus: null,
                 headers: {
-                    "authorization": `${this._client.token}`,
+                    "Authorization": `Bearer ${this._client.token}`,
                     "Content-Type": "application/json",
                 },
                 baseURL: this._client.baseURL,
@@ -20,7 +20,6 @@ class RequestHandler {
                 params: query,
                 timeout: 15000,
             }
-
             if (this._client.debug) console.debug(`Sending request to ${options.url}\nMethod:\n  ${options.method}\nParams:\n  ${query}`)
                 axios.request(options).then((res) => {
                     //  Increase the number of attempts
