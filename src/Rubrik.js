@@ -15,7 +15,7 @@ class Rubrik {
         this.node_ip = options.node_ip
         if (!this.node_ip) throw new Error("A node IP must be provided!")
         this.version = options.version ?? "v1"
-        this.baseURL = options.baseURL ?? `https://${this.cluster_ip}/api`
+        this.baseURL = options.baseURL ?? `https://${this.cluster_ip}/api/`
         this.requestHandler = new RequestHandler(this)
     }
 
